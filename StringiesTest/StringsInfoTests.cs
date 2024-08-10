@@ -5,11 +5,12 @@ namespace StringiesTest
 	public class StringsInfoTests
 	{
 		[Theory]
-		[InlineData("penisyaga", 8)]
+		[InlineData("BibISs", 6)]
 		[InlineData("groobas", 4)]
 		[InlineData("01aaa", 3)]
 		[InlineData("a", 1)]
-		
+		[InlineData("aaaOoOaaa", 3)]
+
 		public void UnequalCharsCount_CorrectStringGiven_ReturnCount(string inputString, int expectedResult)
 		{
 			var stringInfo = new StringsInfo();
@@ -37,11 +38,11 @@ namespace StringiesTest
 
 		[Theory]
 		[InlineData("aaaa1", 4)]
-		[InlineData("beeep144444", 3)]
+		[InlineData("bee1eee", 3)]
 		[InlineData("TwooInARow", 2)]
 		[InlineData("100001", 0)]
 		[InlineData("10001a", 1)]
-		[InlineData("a0", 1)]
+		[InlineData("a10001", 1)]
 		public void EqualLettersCount_CorrectStringGiven_ReturnCount(string inputString, int expectedResult)
 		{
 			var stringInfo = new StringsInfo();
